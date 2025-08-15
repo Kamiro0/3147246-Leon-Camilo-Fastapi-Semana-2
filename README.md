@@ -8,14 +8,11 @@ Mi Primera API FastAPI - Bootcamp
 💻 Equipo de trabajo: SENA – ADSO Ficha 3147246
 
 🔧 Configuración Local
+Este proyecto está configurado para trabajo en equipo compartido:
 
-Este proyecto está preparado para un entorno de desarrollo controlado y colaborativo:
-
-Entorno virtual dedicado: venv-camilo/
-
-Configuración Git aplicada solo a este repositorio
-
-Dependencias aisladas para no interferir con otros proyectos
+Entorno virtual aislado: venv-personal/
+Configuración Git local: Solo para este proyecto
+Dependencias independientes: No afecta otras instalaciones
 
 🚀 Instalación y Ejecución
 # 1. Activar entorno virtual
@@ -31,24 +28,15 @@ uvicorn main:app --reload --port 8000
 📝 Notas del Desarrollador
 
 Git: Configurado únicamente para este proyecto.
-
 Correo: Uso de email privado de GitHub para proteger información personal.
-
 Entorno virtual: Todas las librerías instaladas en venv-camilo/.
-
 Puerto: Por defecto 8000, modificable si existe conflicto.
-
 Estado actual: Semana 2 – API básica con validación y type hints.
 
 🛠️ Resolución de Problemas
-
 No se activa el entorno virtual:
-
 rm -rf venv-camilo && python -m venv venv-camilo
-
-
 Puerto en uso: Cambiar el valor de --port en el comando de Uvicorn.
-
 Git no responde: Revisar configuración local con:
 
 git config user.name
@@ -118,6 +106,10 @@ Este proyecto es una API construida con **FastAPI** y **Pydantic**, que demuestr
 | POST | `/users` | Crea un usuario con datos completos y validación. |
 
 ---
+Reflexión
+Durante este ejercicio aprendí a implementar modelos con Pydantic para validar datos automáticamente en FastAPI.  
+También comprendí cómo usar los *type hints* para mejorar la legibilidad y el mantenimiento del código.  
+Esta experiencia me permitió crear una API más robusta, profesional y preparada para funcionalidades más complejas.
 
 ## 🛠 Ejemplo de uso del endpoint POST `/products`
 
@@ -131,7 +123,4 @@ curl -X POST "http://127.0.0.1:8000/products" \
     "available": true
 }'
 
-## Reflexión
-Durante este ejercicio aprendí a implementar modelos con Pydantic para validar datos automáticamente en FastAPI.  
-También comprendí cómo usar los *type hints* para mejorar la legibilidad y el mantenimiento del código.  
-Esta experiencia me permitió crear una API más robusta, profesional y preparada para funcionalidades más complejas.
+
